@@ -9,14 +9,14 @@
 import UIKit
 import AlamofireImage
 
-class RestaurantsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class RestaurantsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
     // ––––– TODO: Build Restaurant Class
     
     // –––––– TODO: Update restaurants Array to an array of Restaurants
-    var restaurantsArray: [[String:Any?]] = []
+    var restaurantsArray: [Restaurant] = []
     
     
     override func viewDidLoad() {
@@ -53,35 +53,20 @@ class RestaurantsViewController: UIViewController, UITableViewDelegate, UITableV
         
         let restaurant = restaurantsArray[indexPath.row]
         
-        // Set name and phone of cell label
-        cell.nameLabel.text = restaurant["name"] as? String
-        cell.phoneLabel.text = restaurant["display_phone"] as? String
-        
-        // Get reviews
-        let reviews = restaurant["review_count"] as? Int
-        cell.reviewsLabel.text = String(reviews!)
-        
-        // Get categories
-        let categories = restaurant["categories"] as! [[String: Any]]
-        cell.categoryLabel.text = categories[0]["title"] as? String
-        
-        // Set stars images
-        let reviewDouble = restaurant["rating"] as! Double
-        cell.starsImage.image = Stars.dict[reviewDouble]!
-        
-        // Set Image of restaurant
-        if let imageUrlString = restaurant["image_url"] as? String {
-            let imageUrl = URL(string: imageUrlString)
-            cell.restaurantImage.af.setImage(withURL: imageUrl!)
-        }
-        
+        cell.r = restaurant
         return cell
     }
     
     // –––––– TODO: Override segue to pass the restaurant object to the DetailsViewController
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let cell = sender as! UITableViewCell
+        if let indexPath = tableView.indexPath(for: cell) {
+            let r = restaurantsArray[indexPath.row]
+            let detailViewController = segue.destination as! RestaurantDetailViewController
+            detailViewController.r = r
+        }
+    }
     
-
 }
 
 

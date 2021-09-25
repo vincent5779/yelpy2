@@ -18,6 +18,8 @@
 		BBEBF115247738A50044AFE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBEBF114247738A50044AFE0 /* Assets.xcassets */; };
 		BBEBF118247738A50044AFE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBEBF116247738A50044AFE0 /* LaunchScreen.storyboard */; };
 		DEB0D3CBF2C6E48DC3500274 /* Pods_Yelpy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F45387EF0BCD4FD0EAD369F /* Pods_Yelpy.framework */; };
+		F1735C9026FFB50400674C68 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1735C8F26FFB50400674C68 /* Restaurant.swift */; };
+		F1735C9226FFBBF300674C68 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1735C9126FFBBF300674C68 /* RestaurantDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		BBEBF114247738A50044AFE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBEBF117247738A50044AFE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBEBF119247738A50044AFE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1735C8F26FFB50400674C68 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		F1735C9126FFBBF300674C68 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 		BB1AE7192488D9CE00DFC1F4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F1735C8F26FFB50400674C68 /* Restaurant.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -86,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				BBEBF10F247738A50044AFE0 /* RestaurantsViewController.swift */,
+				F1735C9126FFBBF300674C68 /* RestaurantDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -269,7 +275,9 @@
 			files = (
 				BBC34B1A248075140001BE0B /* RestaurantCell.swift in Sources */,
 				BBEBF110247738A50044AFE0 /* RestaurantsViewController.swift in Sources */,
+				F1735C9226FFBBF300674C68 /* RestaurantDetailViewController.swift in Sources */,
 				BB47B3AA247739640029FFF6 /* API.swift in Sources */,
+				F1735C9026FFB50400674C68 /* Restaurant.swift in Sources */,
 				BBE518382484812500D0F8B6 /* YelpStars.swift in Sources */,
 				BBEBF10C247738A50044AFE0 /* AppDelegate.swift in Sources */,
 				BBEBF10E247738A50044AFE0 /* SceneDelegate.swift in Sources */,
